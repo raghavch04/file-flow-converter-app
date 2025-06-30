@@ -56,11 +56,11 @@ const Index = () => {
 
     try {
       const formData = new FormData();
-      formData.append('expenseType', expenseTypeFile);
-      formData.append('transactions', transactionsFile);
+      formData.append('expenseFile', expenseTypeFile);
+      formData.append('file', transactionsFile);
 
       // Replace with your actual API endpoint
-      const apiEndpoint = 'https://your-api-endpoint.com/process-files';
+      const apiEndpoint = 'http://localhost:8181/api/invoices/upload';
       
       const response = await fetch(apiEndpoint, {
         method: 'POST',
